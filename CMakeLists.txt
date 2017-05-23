@@ -31,11 +31,24 @@ set(GRAPH_MATCHING_FILES
 set(DIJKSTRA_FILES
         source/graph/dijkstra/Dijkstra.cpp)
 
+set(GRAPH_ALGORITHMS_FILES
+        source/graph/algorithms/bfs.cpp
+        source/graph/algorithms/dfs.cpp
+        source/graph/algorithms/eul.cpp
+        source/graph/algorithms/ikw.cpp
+        source/graph/algorithms/isreachablefrom.cpp
+        source/graph/algorithms/longestpath.cpp
+        source/graph/algorithms/mbf.cpp
+        source/graph/algorithms/scc.cpp
+        source/graph/algorithms/topologicalsort.cpp
+        source/graph/algorithms/zop.cpp)
+
 set(MAIN_FILE
         source/main.cpp)
 
 set(UNIT_TEST_FILES
         source/unit_tests/unit_tests.cpp
+        source/unit_tests/test.cpp
         source/unit_tests/test_dijkstra.cpp
         source/unit_tests/test_perfect_matching.cpp
         source/unit_tests/test_maximum_matching.cpp
@@ -84,6 +97,7 @@ add_executable(Graph
         ${GRAPH_FILES}
         ${GRAPH_MATCHING_FILES}
         ${DIJKSTRA_FILES}
+        ${GRAPH_ALGORITHMS_FILES}
         ${DEBUG_SOURCE_FILES}
         ${HELPER_SOURCE_FILES}
         ${MAIN_FILE})
